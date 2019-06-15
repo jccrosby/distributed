@@ -6,7 +6,7 @@
   "scripts": {
     "jshint": "jshint js/. --exclude js/vendor && stylelint stylesheets/*.scss",
     "deploy": "./deploy.sh",
-    "build": "gulp",
+    "build": "npx gulp build",
     "test": "karma start karma.conf.js --singleRun=true",
     "postinstall": "opencollective postinstall"
   },
