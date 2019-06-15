@@ -1,0 +1,47 @@
+type UserId {
+  validate() { this.length > 0 && this == auth.uid }
+}
+
+type Board {
+  boardId: String,
+  user_id: UserId,
+  max_votes: Number,
+  date_created: String | Number,
+  text_editing_is_private: Boolean | Null,
+  columns: Object | Null,
+  boardContext: String | Null,
+  hide_vote: Boolean | Null
+}
+
+type Message {
+  text: String,
+  creating: Boolean,
+  user_id: UserId,
+  type: Object,
+  date: String | Number,
+  date_created: String | Number,
+  votes: Number | Null
+}
+
+function isUser(userKey) {
+  return userKey == auth.uid
+}
+
+path /boards {
+  /{boardId} is Board {
+    read() { isUser(this.user_id) }
+    write() { isUser(this.user_id) }
+  }
+}
+
+path /messages {
+  /{boardId} {
+    read() { auth != null }
+    write() { auth != null }
+
+    /{messageId} is Message {
+      read() { isUser(this.user_id) }
+      write() { isUser(this.user_id) }
+    }
+  }
+}

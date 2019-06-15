@@ -1,0 +1,57 @@
+.spinner {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 200px 0;
+  font-size: 10px;
+  text-align: center;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 200px 0;
+  font-size: 10px;
+  text-align: center;
+  background-color: $dark-gray;
+  opacity: 0.7;
+}
+
+.spinner > .rect {
+  display: inline-block;
+  width: 6px;
+  height: 50px;
+  background-color: $grey;
+  animation: stretchdelay 1.2s infinite ease-in-out;
+}
+
+.spinner .rect2 {
+  animation-delay: -1.1s;
+}
+
+.spinner .rect3 {
+  animation-delay: -1s;
+}
+
+.spinner .rect4 {
+  animation-delay: -0.9s;
+}
+
+.spinner .rect5 {
+  animation-delay: -0.8s;
+}
+
+@keyframes stretchdelay {
+  0%,
+  40%,
+  100% {
+    transform: scaleY(0.4);
+  }
+
+  20% {
+    transform: scaleY(1);
+  }
+}

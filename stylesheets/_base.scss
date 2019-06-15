@@ -1,0 +1,458 @@
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../fonts/Roboto-Regular.eot?v=0.4.2');
+  src: url('../fonts/Roboto-Regular.eot?#iefix&v=0.4.2') format('embedded-opentype'),
+  url('../fonts/Roboto-Regular.woff?v=0.4.2') format('woff'),
+  url('../fonts/Roboto-Regular.ttf?v=0.4.2') format('truetype'),
+  url('../fonts/Roboto-Regular.svg?v=0.4.2') format('svg');
+}
+
+@font-face {
+  font-family: 'RobotoBold';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../fonts/Roboto-Bold.eot?v=0.4.2');
+  src: url('../fonts/Roboto-Bold.eot?#iefix&v=0.4.2') format('embedded-opentype'),
+  url('../fonts/Roboto-Bold.woff?v=0.4.2') format('woff'), url('../fonts/Roboto-Bold.ttf?v=0.4.2') format('truetype'),
+  url('../fonts/Roboto-Bold.svg?v=0.4.2') format('svg');
+}
+
+legend {
+  display: none;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  color: $grey;
+}
+
+.pull-right {
+  align-self: flex-end;
+}
+
+iframe {
+  width: 100px;
+  margin-top: 2px;
+  margin-left: 10px;
+  vertical-align: top;
+}
+
+.add {
+  display: inline-block;
+  margin-top: 17px;
+  margin-left: 10px;
+  font-weight: bold;
+  color: $teal;
+  vertical-align: top;
+}
+
+strong {
+  display: inline-block;
+  margin-bottom: 5px;
+  font-size: 1.2em;
+}
+
+.add:hover {
+  color: $light-teal;
+}
+
+.add i {
+  font-size: 0.9em;
+}
+
+ul {
+  padding-left: 0;
+  margin-top: 0;
+}
+
+h2 {
+  display: inline-block;
+  min-width: 50px;
+  max-width: 85%;
+  margin-bottom: 0;
+  font-family: 'RobotoBold';
+  font-size: 1.3em;
+  line-height: 1em;
+  cursor: pointer;
+}
+
+.controls {
+  position: relative;
+  top: -2px;
+  left: -5px;
+  margin: 0;
+  font-size: 0.9em;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  padding-bottom: 35px;
+}
+
+.success-button {
+  width: 50px;
+  height: 24px;
+  padding: 0;
+  margin-top: 5px;
+  margin-left: 0;
+  vertical-align: top;
+  background: $green;
+}
+
+.column-header {
+  margin-bottom: 1em;
+}
+
+.editing-column {
+  margin-bottom: 0.5em;
+}
+
+.editing-column input,
+.editing-board-name input {
+  max-width: 300px;
+  font-size: 1.3em;
+  font-weight: bold;
+  color: $grey;
+}
+
+.editing-board-name input {
+  padding: 0;
+}
+
+.editing-column .blue {
+  position: relative;
+  top: 7px;
+  margin-left: 5px;
+  font-size: 0.9em;
+}
+
+.board-context {
+  height: 36px;
+  padding-left: 14px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  color: $grey;
+  border: none;
+}
+
+.board-name-container {
+  .fa-pencil {
+    position: relative;
+    top: -2px;
+    display: none;
+    cursor: pointer;
+  }
+}
+
+.board-name-container:hover {
+  .fa-pencil {
+    display: inline-block;
+    margin-right: 10px;
+  }
+}
+
+.editing-board-name button.success-button,
+.editing-board-name input,
+.editing-board-name a.blue {
+  margin: 0 5px 0 0;
+  vertical-align: middle;
+}
+
+.editing-board-name a.blue {
+  font-size: 0.9em;
+}
+
+.delete {
+  display: inline-block;
+  margin-top: 19px;
+  color: $red;
+  vertical-align: top;
+}
+
+.delete:hover {
+  color: $faded-red;
+}
+
+.pencil {
+  font-size: 13px;
+}
+
+.editing .fa-times {
+  font-size: 0.9em;
+}
+
+a:not(.disabled) .fa-thumbs-o-up:hover::before {
+  content: '\f164';
+}
+
+a:not(.disabled) .fa-thumbs-o-up:hover {
+  width: 12.8281px;
+}
+
+.fa-pencil:hover {
+  color: $darkest-gray;
+  opacity: 0.5;
+}
+
+.edit {
+  color: $green;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+pre {
+  color: white;
+  background: #333;
+}
+
+small {
+  display: inline-block;
+  margin-left: 0.5em;
+  font-size: 1em;
+  color: $light-grey;
+}
+
+h1 {
+  margin-top: 2em;
+  margin-left: 1.5em;
+
+  small {
+    margin-top: 10px;
+    font-size: 0.5em;
+  }
+}
+
+input {
+  width: 100%;
+  padding: 3px 5px;
+  background: white;
+  border: 1px solid $lightest-gray;
+}
+
+input[type='text'],
+input[type='number'] {
+  width: 200px;
+  font-size: 18px;
+}
+
+.ngdialog-content h1 {
+  margin: 0;
+  margin-bottom: 0.5em;
+}
+
+.ngdialog.ngdialog-theme-plain.bigDialog {
+  padding-top: 60px;
+
+  .ngdialog-content {
+    width: 700px;
+  }
+}
+
+.ngdialog .delete-button {
+  margin-left: 0;
+}
+
+.danger.ngdialog-theme-plain {
+  .ngdialog-close::before {
+    color: white;
+  }
+}
+
+blockquote {
+  margin: 0;
+  font-family: 'PT Serif', serif;
+  font-style: italic;
+
+  p {
+    position: relative;
+    padding: 5px 0;
+    margin: 0 auto;
+    font-size: 14px;
+    font-style: italic;
+    line-height: 20px;
+  }
+
+  footer {
+    margin: 3px;
+    font-size: 13px;
+    line-height: 20px;
+    text-align: right;
+
+    &::before {
+      content: '\2014';
+    }
+  }
+}
+
+.message-list.lvl-over,
+.message > div > .lvl-over {
+  @include transition(none);
+  outline: 2px dashed $outline-color;
+}
+
+.message > div > .lvl-over {
+  outline-offset: 4px;
+}
+
+.message-list.lvl-over {
+  outline-offset: 6px;
+}
+
+[draggable='true'] {
+  cursor: move;
+  user-select: none;
+}
+
+.ngdialog.ngdialog-theme-plain .ngdialog-content .header {
+  position: relative;
+  top: -18px;
+  left: -23px;
+  width: 350px;
+  padding: 15px 17px;
+  margin: 0;
+  margin-bottom: -10px;
+  font-size: 1.3em;
+  color: white;
+  background: $danger;
+}
+
+.base-msg {
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 0.85em;
+  border-radius: 3px;
+}
+
+.info-msg {
+  color: $info-msg;
+  background-color: $info-msg-back;
+
+  @extend .base-msg;
+}
+
+.success-msg {
+  color: $success-msg;
+  background-color: $success-msg-back;
+
+  @extend .base-msg;
+}
+
+.warning-msg {
+  color: $warning-msg;
+  background-color: $warning-msg-back;
+
+  @extend .base-msg;
+}
+
+.error-msg {
+  color: $error-msg;
+  background-color: $error-msg-back;
+
+  @extend .base-msg;
+}
+
+.filter-mobile {
+  display: none;
+
+  @media (max-width: 500px) {
+    display: flex;
+    padding: 0 15px;
+    padding-bottom: 10px;
+    align-items: center;
+    border-bottom: 1px solid $almost-white;
+  }
+
+  select {
+    flex-grow: 2;
+  }
+}
+
+.ngdialog.ngdialog-theme-plain .ngdialog-content {
+  width: 350px;
+  padding: 1.2em 1.5em 1.5em;
+
+  h1 {
+    font-size: 1.7em;
+  }
+
+  label {
+    display: inline-block;
+    padding: 15px 0 10px;
+    font-size: 16px;
+  }
+
+  input {
+    display: block;
+    width: 250px;
+    height: 30px;
+    font-size: 16px;
+  }
+
+  button {
+    height: auto;
+    padding: 5px 10px;
+    margin: 0;
+    margin-top: 1.5em;
+    border-radius: 0;
+  }
+
+  .margin-left {
+    margin-left: 10px;
+  }
+
+  .aling-left {
+    text-align: left;
+  }
+
+  .align-right {
+    text-align: right;
+  }
+}
+
+.funretro-pro {
+  display: flex;
+  padding: 10px 15px;
+  color: white;
+  justify-content: space-around;
+  align-items: center;
+  background: $light-green;
+  border-bottom: 1px solid #02a043;
+
+  p {
+    display: flex;
+    font-size: 15px;
+    align-items: center;
+  }
+
+  p,
+  .button {
+    width: auto;
+    margin: 0;
+  }
+
+  strong {
+    margin: 0;
+    margin-right: 10px;
+  }
+
+  .button {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 0 auto;
+    margin-left: 20px;
+    font-size: 12px;
+    color: white;
+    text-align: center;
+    background: #8e24aa;
+    border-bottom: 3px solid #9c27b0;
+  }
+}

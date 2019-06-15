@@ -1,0 +1,73 @@
+{
+  "rules": {
+    "boards": {
+      "$boardId": {
+        ".validate": "newData.hasChildren(['boardId', 'user_id', 'max_votes', 'date_created'])",
+        "boardId": {
+          ".validate": "newData.isString()"
+        },
+        "user_id": {
+          ".validate": "newData.val().length > 0 && newData.val() == auth.uid"
+        },
+        "max_votes": {
+          ".validate": "newData.isNumber()"
+        },
+        "date_created": {
+          ".validate": "newData.isString() || newData.isNumber()"
+        },
+        "text_editing_is_private": {
+          ".validate": "newData.isBoolean()"
+        },
+        "columns": {
+          ".validate": "newData.hasChildren()"
+        },
+        "boardContext": {
+          ".validate": "newData.isString()"
+        },
+        "hide_vote": {
+          ".validate": "newData.isBoolean()"
+        },
+        "$other": {
+          ".validate": "false"
+        },
+        ".read": "data.child('user_id').val() == auth.uid",
+        ".write": "newData.child('user_id').val() == auth.uid"
+      }
+    },
+    "messages": {
+      "$boardId": {
+        "$messageId": {
+          ".validate": "newData.hasChildren(['text', 'creating', 'user_id', 'type', 'date', 'date_created'])",
+          "text": {
+            ".validate": "newData.isString()"
+          },
+          "creating": {
+            ".validate": "newData.isBoolean()"
+          },
+          "user_id": {
+            ".validate": "newData.val().length > 0 && newData.val() == auth.uid"
+          },
+          "type": {
+            ".validate": "newData.hasChildren()"
+          },
+          "date": {
+            ".validate": "newData.isString() || newData.isNumber()"
+          },
+          "date_created": {
+            ".validate": "newData.isString() || newData.isNumber()"
+          },
+          "votes": {
+            ".validate": "newData.isNumber()"
+          },
+          "$other": {
+            ".validate": "false"
+          },
+          ".read": "data.child('user_id').val() == auth.uid",
+          ".write": "newData.child('user_id').val() == auth.uid"
+        },
+        ".read": true,
+        ".write": true
+      }
+    }
+  }
+}

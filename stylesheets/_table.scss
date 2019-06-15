@@ -1,0 +1,72 @@
+table th {
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.table tbody tr td {
+  border-top: none;
+  border-bottom: 1px solid #ddd;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.table {
+  max-width: 550px;
+  margin: 0 auto;
+  border: none;
+
+  .fa {
+    font-size: 1.5em;
+  }
+
+  .fa-check {
+    color: $green;
+  }
+
+  .fa-times {
+    color: $red;
+  }
+
+  tbody {
+    text-align: center;
+  }
+
+  th {
+    padding-bottom: 15px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #555 !important;
+    border: none;
+  }
+}
+
+.green-feature {
+  color: $green;
+}
+
+.red-feature {
+  color: $red;
+}
+
+span {
+  font-family: 'RobotoBold';
+}
+
+td {
+  width: 5%;
+  padding: 5px 0;
+
+  &:first-child {
+    width: 10%;
+  }
+
+  strong {
+    font-size: 1em;
+  }
+}

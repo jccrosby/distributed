@@ -1,0 +1,108 @@
+.menu {
+  position: relative;
+  top: -1px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 15px;
+  overflow: hidden;
+  border-bottom: 2px solid $almost-white;
+
+  a {
+    position: relative;
+    top: 2px;
+    margin-right: 7px;
+    color: #555;
+
+    i {
+      position: relative;
+      top: 2px;
+      font-size: 1.3em;
+      color: $purple;
+    }
+  }
+
+  h2 {
+    margin-top: 0;
+    margin-right: 10px;
+    line-height: 1.3em;
+
+    @media (max-width: 500px) {
+      display: block;
+      margin-bottom: 10px;
+    }
+  }
+
+  @media (max-width: 500px) {
+    display: block;
+
+    .menu-controls {
+      display: flex;
+      margin-bottom: 5px;
+    }
+
+    select {
+      margin: 0;
+      flex-grow: 2;
+    }
+
+    .new-column {
+      display: none;
+      min-width: 80px;
+    }
+  }
+}
+
+.remaining-votes {
+  padding: 8px 12px;
+  margin-right: 10px;
+  border-radius: 2px;
+  box-shadow: 0 0 0 0 rgba($teal, 0.5);
+  animation: pulse 1.5s;
+
+  @media (max-width: 500px) {
+    display: block;
+    padding-bottom: 0;
+    padding-left: 0;
+  }
+
+  .settings {
+    cursor: pointer;
+  }
+
+  strong {
+    margin: 0;
+    font-size: 1.3em;
+    color: $teal;
+  }
+
+  @keyframes pulse {
+    70% {
+      box-shadow: 0 0 0 50px rgba($teal, 0);
+    }
+
+    100% {
+      box-shadow: 0 0 0 0 rgba($teal, 0);
+    }
+  }
+}
+
+.filter-message {
+  width: 200px;
+  height: 25px;
+  margin-left: 15px;
+  font-size: 0.85em;
+  vertical-align: top;
+  border-radius: 3px;
+
+  @media (max-width: 500px) {
+    width: 170px;
+    margin-left: 5px;
+  }
+}
+
+.ngdialog.ngdialog-theme-plain .ngdialog-content .hide-vote {
+  min-width: 80px;
+  margin-left: 0;
+  border-radius: 3px;
+  margin-top: 0;
+}
